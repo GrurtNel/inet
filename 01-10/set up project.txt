@@ -1,0 +1,9 @@
+﻿1) add project lazi.dao.adapter
+- import jar :lazi.utils, ojdbc 7, lazi.common.model, gson
+- Properties trong project remove nhung thu vien loi path
+2) open project customer.crm.model
+3) open project customer.crm.dao
+- import jar log4j, gson, ọdbclazi.uils, customer.crm.dao(tren), customer.crm.model(tren)
+3) open project Lazi_cms_web
+- import jar jstl, project customer.crm.model, customer.crm.dao
+=>>>>>>>>>>>moi khi sua project depedency thi build lai

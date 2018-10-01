@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../../templates/admin.xhtml">
+
+            <ui:define name="content">
+                
+                <div class="portlet box green">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-cogs"></i>Danh sách danh mục
+                        </div>
+
+                    </div>
+                    <div class="portlet-body flip-scroll">
+                        <table class="table table-bordered table-striped table-condensed flip-content">
+                            <thead class="flip-content">
+                                <tr>
+                                    <th width="20%">
+                                        Tên danh mục
+                                    </th>
+                                    <th>
+                                        Danh mục cha
+                                    </th>
+                                    <th class="numeric">
+                                        Chỉ số trái
+                                    </th>
+                                    <th class="numeric">
+                                        Chỉ số phải
+                                    </th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <ui:repeat value="#{dmTinTucBean.dsTintuc}" var="tintuc">
+                                    <tr >
+                                    <td>
+                                        #{tintuc.ten}
+                                    </td>
+                                    <td>
+                                         #{tintuc.danhMucCha}
+                                    </td>
+                                    <td class="numeric">
+                                        #{tintuc.chiSoTrai}
+                                    </td>
+                                    <td class="numeric">
+                                        #{tintuc.chiSoPhai}
+                                    </td>
+                                    
+                                </tr>
+                                </ui:repeat>
+                                
+                            </tbody>
+                        </table>
+                        
+                        <div class="form-actions">
+                            <h:outputLink value="tao-moi.xhtml" class="btn blue">Tạo mới</h:outputLink>
+                        </div>
+                    </div>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

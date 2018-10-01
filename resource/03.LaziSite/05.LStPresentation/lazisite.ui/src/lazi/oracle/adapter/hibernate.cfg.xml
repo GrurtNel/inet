@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+<!--    <property name="hibernate.connection.url">jdbc:oracle:thin:@10.20.0.253:1521:orcl</property>
+    <property name="hibernate.connection.username">lazi123</property>
+    <property name="hibernate.connection.password">123456</property>-->
+    
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@mascom.vn:1521/orcl</property>
+    <property name="hibernate.connection.username">lazibug</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.connection.password">123456</property>
+    
+    <mapping class="crm.model.customer.KhachHang"></mapping>
+    <mapping class="crm.model.customer.KhangLoai"></mapping>
+    <!--<mapping class="crm.model.customer.KhangNguon"></mapping>-->
+    <mapping class="crm.model.customer.KhangQhe"></mapping>
+    <mapping class="crm.model.customer.DmKenhBhang"></mapping>
+    <mapping class="crm.model.customer.CrmKhangTtac"></mapping>
+    <mapping class="crm.model.customer.CrmTthaiTtac"></mapping>
+    <mapping class="crm.model.customer.UiDmucTinTuc"></mapping>
+    <!--<mapping class="lazi.model.duannsd.GvDuAnNsd"></mapping>-->
+<!--    <mapping class="crm.model.common.DcCtruc"></mapping>
+    <mapping class="crm.model.common.DcCtrucCtiet"></mapping>-->
+    <!--<mapping class="lazi.model.common.DmDmucGtri"></mapping>-->
+    <!--<mapping class="lazi.model.common.DmTinhTp"></mapping>-->
+    <!--<mapping class="lazi.model.system.HtCauHinhCtiet"></mapping>-->
+    <!--<mapping class="lazi.model.system.HtCauHinhLoai"></mapping>-->
+    <!--<mapping class="lazi.model.giaoviec.GvCongViec"></mapping>-->
+    <mapping class="lazi.model.customer.KhKhachHang"></mapping>
+    <mapping class="lazi.model.customer.KhKhachHangTtinh"></mapping>
+    <mapping class="lazi.model.customer.KhKhachHangLsu"></mapping>
+    <mapping class="lazi.model.customer.KhLsuMuahang"></mapping>
+  </session-factory>
+</hibernate-configuration>

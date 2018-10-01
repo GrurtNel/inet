@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./../../templates/admin.xhtml">
+            <ui:define name="content">
+                <div class="col-md-12 ">
+                    <!-- BEGIN SAMPLE FORM PORTLET-->
+                    <div class="portlet box blue">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-gift"></i> Tạo mới bài viết
+                            </div>
+                            <div class="tools">
+                                <a href="" class="collapse">
+                                </a>
+                                <a href="#portlet-config" data-toggle="modal" class="config">
+                                </a>
+                                <a href="" class="reload">
+                                </a>
+                                <a href="" class="remove">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+                            <form role="form">
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label>Tên bài viết</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-envelope"></i>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Tên bài viết"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nội dung bài viết</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon input-circle-left">
+                                                <i class="fa fa-envelope"></i>
+                                            </span>
+                                           <textarea class="ckeditor form-control" name="editor2" rows="6" data-error-container="#editor2_error"></textarea>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <label>Ảnh bài viết</label>
+                                        <button type="button" class="btn green">Chọn file</button>
+                                      
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Danh mục</label>
+                                        <input type="text" class="form-control" placeholder="Readonly" readonly=""/>
+                                    </div>
+                                  
+                                 
+                                   
+                                 
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn blue">Tạo mới bài viết</button>
+                                    <button type="button" class="btn default">Hủy</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                  
+                  
+                </div>
+                </ui:define>
+
+                </ui:composition>
+
+                </body>
+                </html>
