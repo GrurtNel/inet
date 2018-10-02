@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <body>
+        <ui:composition template="./../../templates/admin.xhtml">
+            <ui:define name="content">
+                <div class="col-md-12 ">
+                    <!-- BEGIN SAMPLE FORM PORTLET-->
+                    <div class="portlet box blue">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-gift"></i> Tạo mới danh mục
+                            </div>
+                            <div class="tools">
+                                <a href="" class="collapse">
+                                </a>
+                                <a href="#portlet-config" data-toggle="modal" class="config">
+                                </a>
+                                <a href="" class="reload">
+                                </a>
+                                <a href="" class="remove">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+                            <h:form role="form">
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label>Tên danh mục</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-envelope"></i>
+                                            </span>
+                                            <h:inputText value="#{dmTinTucBean.tintuc.ten}"  class="form-control" a:placeholder="Tên danh mục" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Danh mục cha</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-envelope"></i>
+                                            </span>
+                                            <h:selectOneMenu value = "#{dmTinTucBean.tintuc.danhMucCha}" class="form-control"> 
+                                                <c:forEach items="#{dmTinTucBean.dsTintuc}" var="tintuc">
+                                                    <f:selectItem itemValue = "#{tintuc.id}" itemLabel = "#{tintuc.ten}" /> 
+                                                </c:forEach>
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <h:commandButton class="btn blue" value="Thêm mới" action="#{dmTinTucBean.taoMoi()}"/>
+                                    <button type="button" class="btn default">Hủy</button>
+                                </div>
+                            </h:form>
+                        </div>
+                        <c:if test="#{not empty dmTinTucBean.errMsg}">
+                            <div class="alert alert-danger">
+                                <strong>Error!</strong> #{ dmTinTucBean.errMsg}
+                            </div>
+                        </c:if>
+
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

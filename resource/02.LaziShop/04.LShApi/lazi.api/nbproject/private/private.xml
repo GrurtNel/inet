@@ -5,5 +5,8 @@
         <group name="inetcms">
             <file>file:/D:/Manh/inetcms/02.LaziShop/04.LShApi/lazi.api/web/redirect.jsp</file>
         </group>
+        <group>
+            <file>file:/D:/WORKING/legasoft/inet/resource/02.LaziShop/04.LShApi/lazi.api/src/java/lazi/api/CrmAPI.java</file>
+        </group>
     </open-files>
 </project-private>

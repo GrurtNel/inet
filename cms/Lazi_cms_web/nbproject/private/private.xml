@@ -6,5 +6,17 @@
             <file>file:/D:/Manh/inetcms/03.LaziSite/05.LStPresentation/lazisite.ui/Lazi_cms_web/web/templates/admin.xhtml</file>
             <file>file:/D:/Manh/inetcms/03.LaziSite/05.LStPresentation/lazisite.ui/Lazi_cms_web/web/index.xhtml</file>
         </group>
+        <group>
+            <file>file:/D:/WORKING/legasoft/inet/cms/Lazi_cms_web/web/pages/login.xhtml</file>
+            <file>file:/D:/WORKING/legasoft/inet/cms/Lazi_cms_web/web/pages/dm-tintuc/tao-moi.xhtml</file>
+            <file>file:/D:/WORKING/legasoft/inet/cms/Lazi_cms_web/nbproject/build-impl.xml~</file>
+            <file>file:/D:/WORKING/legasoft/inet/cms/Lazi_cms_web/web/pages/product/list.xhtml</file>
+            <file>file:/D:/WORKING/legasoft/inet/cms/Lazi_cms_web/web/pages/dm-tintuc/danh-sach.xhtml</file>
+            <file>file:/D:/WORKING/legasoft/inet/cms/Lazi_cms_web/src/java/bean/dmtintuc/DmTinTucBean.java</file>
+            <file>file:/D:/WORKING/legasoft/inet/cms/Lazi_cms_web/web/templates/admin-login.xhtml</file>
+            <file>file:/D:/WORKING/legasoft/inet/cms/Lazi_cms_web/web/WEB-INF/web.xml</file>
+            <file>file:/D:/WORKING/legasoft/inet/cms/Lazi_cms_web/web/WEB-INF/faces-config.xml</file>
+            <file>file:/D:/WORKING/legasoft/inet/cms/Lazi_cms_web/web/templates/admin.xhtml</file>
+        </group>
     </open-files>
 </project-private>

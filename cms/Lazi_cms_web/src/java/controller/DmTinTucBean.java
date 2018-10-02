@@ -3,21 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bean.dmtintuc;
+package controller;
 
 import common.ErrorConstant;
 import crm.model.customer.UiDmucTinTuc;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import lazi.dao.customer.UIDmucTinTucDAO;
+import utils.JsfUtils;
 
 /**
  *
  * @author Admin
  */
 @ManagedBean
-@RequestScoped
+@SessionScoped
 public class DmTinTucBean {
 
     /**
@@ -34,11 +36,19 @@ public class DmTinTucBean {
     public String taoMoi() {
         if (this.tintuc.getTen().equals("")) {
             errMsg = ErrorConstant.validateRequired("tên danh mục");
+            JsfUtils.addErrorMessage("Trường tin tức không được để trống.");
             return "tao-moi";
         }
         UiDmucTinTuc tintucRes = new UIDmucTinTucDAO().create(tintuc);
         System.out.println(tintucRes);
         return "danh-sach?faces-redirect=true";
+    }
+
+    public String suaDanhmuc(UiDmucTinTuc tintuc) {
+        String id = JsfUtils.getRequestParameter("id");
+        System.out.println("UiDmucTinTuc" + id);
+        this.tintuc = tintuc;
+        return "sua?faces-redirect=true";
     }
 
     public UiDmucTinTuc getTintuc() {

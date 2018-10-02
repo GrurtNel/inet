@@ -12,5 +12,15 @@
             <file>file:/Users/manh/Project/Lazi/02.LaziShop/03.LShBus/customer.crm.bus/src/crm/bus/customer/BusinessCustomer.java</file>
         </group>
         <group name="inetcms"/>
+        <group>
+            <file>file:/D:/WORKING/legasoft/inet/resource/02.LaziShop/03.LShBus/customer.crm.bus/src/crm/bus/customer/base/BussinessConst.java</file>
+            <file>file:/D:/WORKING/legasoft/inet/resource/02.LaziShop/03.LShBus/customer.crm.bus/src/crm/bus/customer/cache/DmTinhTpBuffer.java</file>
+            <file>file:/D:/WORKING/legasoft/inet/resource/02.LaziShop/03.LShBus/customer.crm.bus/src/crm/bus/customer/channelsell/BusinessChannelSell.java</file>
+            <file>file:/D:/WORKING/legasoft/inet/resource/02.LaziShop/03.LShBus/customer.crm.bus/src/crm/bus/customer/cache/DmGiaTriBuffer.java</file>
+            <file>file:/D:/WORKING/legasoft/inet/resource/02.LaziShop/03.LShBus/customer.crm.bus/src/crm/bus/customer/base/BussinessProcessCustomer.java</file>
+            <file>file:/D:/WORKING/legasoft/inet/resource/02.LaziShop/03.LShBus/customer.crm.bus/src/crm/bus/customer/requestapi/JobRequest.java</file>
+            <file>file:/D:/WORKING/legasoft/inet/resource/02.LaziShop/03.LShBus/customer.crm.bus/src/crm/bus/customer/requestapi/ReqObject.java</file>
+            <file>file:/D:/WORKING/legasoft/inet/resource/02.LaziShop/03.LShBus/customer.crm.bus/src/crm/bus/customer/channelsell/ResponseChannelSell.java</file>
+        </group>
     </open-files>
 </project-private>

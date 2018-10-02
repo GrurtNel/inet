@@ -48,11 +48,11 @@
                                             <span class="input-group-addon">
                                                 <i class="fa fa-envelope"></i>
                                             </span>
-                                            <h:selectOneListbox value = "#{dmTinTucBean.tintuc.danhMucCha}" class="form-control"> 
+                                            <h:selectOneMenu value = "#{dmTinTucBean.tintuc.danhMucCha}" class="form-control"> 
                                                 <c:forEach items="#{dmTinTucBean.dsTintuc}" var="tintuc">
                                                     <f:selectItem itemValue = "#{tintuc.id}" itemLabel = "#{tintuc.ten}" /> 
                                                 </c:forEach>
-                                            </h:selectOneListbox>
+                                            </h:selectOneMenu>
 
                                         </div>
                                     </div>
@@ -61,14 +61,9 @@
                                     <h:commandButton class="btn blue" value="Thêm mới" action="#{dmTinTucBean.taoMoi()}"/>
                                     <button type="button" class="btn default">Hủy</button>
                                 </div>
+                                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                             </h:form>
                         </div>
-                        <c:if test="#{not empty dmTinTucBean.errMsg}">
-                            <div class="alert alert-danger">
-                                <strong>Error!</strong> #{ dmTinTucBean.errMsg}
-                            </div>
-                        </c:if>
-
                     </div>
                 </div>
             </ui:define>
