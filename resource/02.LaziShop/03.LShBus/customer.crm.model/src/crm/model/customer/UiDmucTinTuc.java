@@ -6,8 +6,6 @@
 package crm.model.customer;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -41,22 +39,22 @@ public class UiDmucTinTuc implements Serializable {
     @Id
     @Basic(optional = false)
     @Column(name = "ID")
-    private BigDecimal id;
+    private long id;
     @Column(name = "MA_DVI_QLY")
     private String maDviQly;
     @Column(name = "TEN")
     private String ten;
     @Column(name = "DANH_MUC_CHA")
-    private BigInteger danhMucCha;
+    private int danhMucCha;
     @Column(name = "CHI_SO_TRAI")
-    private BigInteger chiSoTrai;
+    private int chiSoTrai;
     @Column(name = "CHI_SO_PHAI")
-    private BigInteger chiSoPhai;
+    private int chiSoPhai;
 
     public UiDmucTinTuc() {
     }
 
-    public UiDmucTinTuc(BigDecimal id, String maDviQly, String ten, BigInteger danhMucCha, BigInteger chiSoTrai, BigInteger chiSoPhai) {
+    public UiDmucTinTuc(long id, String maDviQly, String ten, int danhMucCha, int chiSoTrai, int chiSoPhai) {
         this.id = id;
         this.maDviQly = maDviQly;
         this.ten = ten;
@@ -66,7 +64,7 @@ public class UiDmucTinTuc implements Serializable {
     }
 
     
-    public UiDmucTinTuc(String maDviQly, String ten, BigInteger danhMucCha, BigInteger chiSoTrai, BigInteger chiSoPhai) {
+    public UiDmucTinTuc(String maDviQly, String ten, int danhMucCha, int chiSoTrai, int chiSoPhai) {
         this.maDviQly = maDviQly;
         this.ten = ten;
         this.danhMucCha = danhMucCha;
@@ -75,15 +73,15 @@ public class UiDmucTinTuc implements Serializable {
     }
 
     
-    public UiDmucTinTuc(BigDecimal id) {
+    public UiDmucTinTuc(long id) {
         this.id = id;
     }
 
-    public BigDecimal getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(BigDecimal id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -103,34 +101,34 @@ public class UiDmucTinTuc implements Serializable {
         this.ten = ten;
     }
 
-    public BigInteger getDanhMucCha() {
+    public int getDanhMucCha() {
         return danhMucCha;
     }
 
-    public void setDanhMucCha(BigInteger danhMucCha) {
+    public void setDanhMucCha(int danhMucCha) {
         this.danhMucCha = danhMucCha;
     }
 
-    public BigInteger getChiSoTrai() {
+    public int getChiSoTrai() {
         return chiSoTrai;
     }
 
-    public void setChiSoTrai(BigInteger chiSoTrai) {
+    public void setChiSoTrai(int chiSoTrai) {
         this.chiSoTrai = chiSoTrai;
     }
 
-    public BigInteger getChiSoPhai() {
+    public int getChiSoPhai() {
         return chiSoPhai;
     }
 
-    public void setChiSoPhai(BigInteger chiSoPhai) {
+    public void setChiSoPhai(int chiSoPhai) {
         this.chiSoPhai = chiSoPhai;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+//        hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
 
@@ -141,9 +139,9 @@ public class UiDmucTinTuc implements Serializable {
             return false;
         }
         UiDmucTinTuc other = (UiDmucTinTuc) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
+//        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+//            return false;
+//        }
         return true;
     }
 

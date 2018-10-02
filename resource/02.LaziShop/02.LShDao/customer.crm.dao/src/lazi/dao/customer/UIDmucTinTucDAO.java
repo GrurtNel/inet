@@ -20,10 +20,12 @@ import org.hibernate.transform.Transformers;
  * @author Admin
  */
 public class UIDmucTinTucDAO extends OracleBaseDAO {
-    
+
     private static class UIDmucTinTucDAOHelper {
+
         private static final UIDmucTinTucDAO instance = new UIDmucTinTucDAO();
     }
+
     public static UIDmucTinTucDAO getInstance() {
         return UIDmucTinTucDAOHelper.instance;
     }
@@ -31,6 +33,7 @@ public class UIDmucTinTucDAO extends OracleBaseDAO {
     public UIDmucTinTucDAO() {
         table = "UIDmucTinTuc";
     }
+
     //create
     public UiDmucTinTuc create(UiDmucTinTuc tintuc) {
         UiDmucTinTuc result = null;
@@ -38,7 +41,7 @@ public class UIDmucTinTucDAO extends OracleBaseDAO {
             openSession();
             if (session != null) {
                 tx = session.beginTransaction();
-//                tintuc.setId(BigDecimal.valueOf(System.currentTimeMillis() / 1000));
+                tintuc.setId(System.currentTimeMillis() / 1000);
                 session.save(tintuc);
 //                if (khachHang != null && khachHang.getId() != 0) {
 //                    if (khachHangTtinh != null) {
@@ -54,18 +57,19 @@ public class UIDmucTinTucDAO extends OracleBaseDAO {
             if (tx != null) {
                 tx.rollback();
             }
-            ConsoleLogger.addERROR2ConsoleFile("UIDmucTinTucDAO > create >", e);
+            System.out.println("UIDmucTinTucDAO > create >" + e);
+//            ConsoleLogger.addERROR2ConsoleFile("UIDmucTinTucDAO > create >", e);
         } finally {
             closeSession();
         }
 
         return result;
     }
-    
+
     public List<UiDmucTinTuc> findAllWithout(long id) {
         try {
             openSession();
-            if(session != null) {
+            if (session != null) {
                 Query sqlQuery = session.createQuery(" from UiDmucTinTuc where id!=:id").setParameter("id", id);
 //                sqlQuery.setParameter("id", id);
 //                sqlQuery.setResultTransformer(Transformers.aliasToBean(UiDmucTinTuc.class));
@@ -78,10 +82,11 @@ public class UIDmucTinTucDAO extends OracleBaseDAO {
         }
         return null;
     }
+
     public static void main(String[] args) {
         UIDmucTinTucDAO dao = new UIDmucTinTucDAO();
-        UiDmucTinTuc tintuc = new UiDmucTinTuc(BigDecimal.valueOf(System.currentTimeMillis() / 1000),"01","",BigInteger.ONE,BigInteger.TEN,BigInteger.TEN);
-        List<UiDmucTinTuc> listTintuc = dao.findAllWithout(0L);
+//        UiDmucTinTuc tintuc = new UiDmucTinTuc(BigDecimal.valueOf(System.currentTimeMillis() / 1000),"01","",BigInteger.ONE,BigInteger.TEN,BigInteger.TEN);
+        List<UiDmucTinTuc> listTintuc = dao.findAllWithout(0);
         System.out.println(listTintuc);
     }
 }
